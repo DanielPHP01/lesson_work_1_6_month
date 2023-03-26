@@ -32,11 +32,9 @@ class MainActivity : AppCompatActivity() {
             Log.i("ololo", "initListener: ${links.last()}")
         }
         binding.btnRandom.setOnClickListener {
-            val random = Random()
-            val possition = random.nextInt(links.size)
-            val url = links[possition]
+            val url = links.random()
             binding.image.loadImage(url)
-            Log.w("ololo", "initListener: ${links[possition]}")
+            Log.w("ololo", "initListener: $url")
         }
     }
 
